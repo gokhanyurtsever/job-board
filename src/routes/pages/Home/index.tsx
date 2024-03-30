@@ -4,6 +4,7 @@ import Hero from "../../../components/Hero";
 import Services from "../../../components/Services";
 import WelcomeText from "../../../components/WelcomeText";
 import { jobs } from "../../../data/jobs";
+import Searchbar from "../../../components/Searchbar";
 
 
 
