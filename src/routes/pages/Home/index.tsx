@@ -5,6 +5,7 @@ import Services from "../../../components/Services";
 import WelcomeText from "../../../components/WelcomeText";
 import { jobs } from "../../../data/jobs";
 import Searchbar from "../../../components/Searchbar";
+import ListedJobs from "../../../components/ListedJobs";
 
 
 
@@ -26,7 +27,10 @@ const Home = () => {
 		setFilteredJobs(filtered);
 	};
 
-  const handleSearch = (query:string) => {};
+	const handleSearch = (query: string) => {
+		const filtered = jobs.filter((job) => job.title.toLowerCase().includes(query.toLowerCase()));
+		setFilteredJobs(filtered);
+	};
 
 return (
 		<div className="w-full">
@@ -41,6 +45,10 @@ return (
 					/>
 					<div className="w-full">
 						<Searchbar onSearch={handleSearch} />
+						<ListedJobs 
+						jobs={filteredJobs} 
+						savedJobs={savedJobs} 
+						setSavedJobs={setSavedJobs} />
 					</div>
 				</div>
 			</div>
