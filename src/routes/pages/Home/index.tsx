@@ -6,6 +6,7 @@ import WelcomeText from "../../../components/WelcomeText";
 import { jobs } from "../../../data/jobs";
 import Searchbar from "../../../components/Searchbar";
 import ListedJobs from "../../../components/ListedJobs";
+import PopularSearches from "../../../components/PopularSearches";
 
 
 
@@ -45,6 +46,7 @@ return (
 					/>
 					<div className="w-full">
 						<Searchbar onSearch={handleSearch} />
+						<PopularSearches onSearch={handleSearch} />
 						<ListedJobs 
 						jobs={filteredJobs} 
 						savedJobs={savedJobs} 
