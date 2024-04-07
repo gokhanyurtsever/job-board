@@ -1,5 +1,5 @@
 import JobDescription from "../../../components/JobDescription"
-import JobSidebar from "../../../components/JobSiderbar"
+import JobSidebar from "../../../components/JobSidebar"
 
 
 
